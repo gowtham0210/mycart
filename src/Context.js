@@ -1,7 +1,7 @@
 import React, {useState, useContext, createContext} from 'react'
 import cartItems from "./data";
 
-const Appcontext = createContext();
+const AppContext = createContext();
 
 const AppProvider = ({children}) => { 
      const [cart, setCart] = useState(cartItems)

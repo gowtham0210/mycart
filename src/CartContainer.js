@@ -1,4 +1,5 @@
 import React from 'react'
+import Cartitem from './Cartitem';
 import {useGlobalContext} from './Context'
 
 function CartContainer() {
@@ -19,14 +20,18 @@ function CartContainer() {
         <header>
             <h2>your wishlist</h2>
         </header>
-        <div></div>
+        <div>
+            {cart.map((item) =>{
+                return <Cartitem key={item.id} {...item} />
+            })}
+        </div>
         {/* cart footer */}
         <footer>
             <hr />
             <div className='cart-total'>
               <h4>total <span>&#8377; 0.00</span></h4>
             </div>
-            <button className='btn clear-btn' onClick={() => console.log('clear cart')>clear cart</button>
+            <button className='btn clear-btn' onClick={() => console.log('clear cart')}>clear cart</button>
         </footer>
 
     </section>
