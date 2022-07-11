@@ -1,4 +1,4 @@
-import macbook from "./media/products/macbook.png";
+import macbook from "./media/Products/macbook.png";
 import oneplus from "./media/Products/oneplus.png";
 import predator from "./media/Products/predator.png";
 
