@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/mycart/static/css/main.289eed61.css",
+    "main.js": "/mycart/static/js/main.c7922529.js",
+    "static/media/macbook.png": "/mycart/static/media/macbook.bbc3735e2c669225df7a.png",
+    "static/media/oneplus.png": "/mycart/static/media/oneplus.e21ee9f35621553df243.png",
+    "static/media/predator.png": "/mycart/static/media/predator.311744cd4d44db031a24.png",
+    "index.html": "/mycart/index.html",
+    "static/media/bag.svg": "/mycart/static/media/bag.145245cee1158cbdf20a6df75b877f98.svg",
+    "main.289eed61.css.map": "/mycart/static/css/main.289eed61.css.map",
+    "main.c7922529.js.map": "/mycart/static/js/main.c7922529.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.289eed61.css",
+    "static/js/main.c7922529.js"
+  ]
+}
