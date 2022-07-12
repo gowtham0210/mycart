@@ -12,11 +12,14 @@
             <button className='remove-btn'onClick={() => remove(id)}>remove</button>
         </div>
         <div style={{display:"flex"}}>
+
             {/* decreae amount */}
             <button className='amount-btn' onClick={() => toggleAmount(id,"dec")}>
                 <p style={{fontSize: "20px"}}>-</p>
             </button>
+
             <p className='amount'>{amount}</p>
+            
             {/* increase Amount */}
             <button className='amount-btn' onClick={() => toggleAmount(id,"inc")}>
                 <p style={{fontSize: "20px"}}>+</p>
