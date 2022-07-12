@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div>
     <hr />
-    <div className='footer'>Code by <span>Gowtham </span>made with <span>❤</span></div>
+    <p className='footer'>Code by <span>Gowtham </span>made with <span>❤</span></p>
     </div>
   )
 }
