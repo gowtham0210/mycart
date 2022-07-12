@@ -14,7 +14,7 @@ const reducer = (state, action) =>{
             if(cartitem.id === action.payload){
                 return {
                     ...cartitem,
-                    amount:cartitem+1
+                    amount:cartitem.amount+1
                 };
             }
             return cartitem;
@@ -26,7 +26,7 @@ const reducer = (state, action) =>{
             if(cartitem.id === action.payload){
                 return {
                     ...cartitem,
-                    amount:cartitem-1
+                    amount:cartitem.amount-1
                 };
             }
             return cartitem;
@@ -34,15 +34,14 @@ const reducer = (state, action) =>{
         return {...state, cart:tempcart}
     }
 
-    if(action.type === "GET_TOTALS")
-    {
-    let {total , amount } = state.cart.reduce(
-               (cartTotal, cartitem) =>{
-                            const {price, amount} = cartitem;
-                            const itemTotal = price * amount;
-
-                            cartTotal.total += itemTotal;
-                            cartTotal.amount += amount;
+    if(action.type === "GET_TOTALS"){
+        let {total , amount } = state.cart.reduce(
+            (cartTotal, cartitem) =>{
+               const {price, amount} = cartitem;
+               const itemTotal = price * amount;
+               cartTotal.total += itemTotal;
+               cartTotal.amount += amount;
+               return cartTotal;
                },
                {
                 total:0,
@@ -61,8 +60,9 @@ const reducer = (state, action) =>{
         return {...state, cart:action.payload,loading:false};
     }
     if(action.type === "TOGGLE_AMOUNT"){
-        let tempcart = state.cart.map((cartitem) =>{
-            if(cartitem.id === action.payload){
+        let tempcart = state.cart
+        .map((cartitem) =>{
+            if(cartitem.id === action.payload.id){
                 if(action.payload.type === "inc"){
                  return {...cartitem, amount:cartitem.amount + 1}
             }
